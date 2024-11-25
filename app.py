@@ -13,12 +13,11 @@ import uuid
 app = Flask(__name__)
 
 # Configurations
-#BASE_URL = "afss-staff-login.onrender.com"
-BASE_URL = "afss-staff-login.onrender.com"
+BASE_URL = "https://afss-staff-login.onrender.com"
 ADMIN_EMAIL = "cobwebb784@gmail.com"
 EXCEL_FILE = "user_logs.xlsx"
 OFFICE_MACS = ["14-AB-C5-43-F0-08"]  # Replace with allowed MAC addresses
-OFFICE_NETWORK = "192.168.137.1."  # Replace with your office network prefix
+OFFICE_NETWORK = "192.168.137."  # Replace with your office network prefix
 
 # Ensure the Excel file exists
 if not os.path.exists(EXCEL_FILE):
@@ -92,4 +91,4 @@ def login_user():
 schedule_email()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
